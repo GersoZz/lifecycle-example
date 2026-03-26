@@ -26,11 +26,18 @@ function Lifecycle() {
   if (count === 5) 
     return null;
 
+  const handleClick = () => {
+    console.log("🚀 ~ antes ~ count:", count)
+    setCount(count + 1)
+    console.log("🚀 ~ despues ~ count:", count)
+    // más codigo
+  };
+
   return (
     <section id="center">
       <button 
         className="counter" 
-        onClick={() => setCount(count + 1)}
+        onClick={handleClick}
       >
         Current Count: {count}
       </button>
